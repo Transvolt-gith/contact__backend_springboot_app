@@ -19,4 +19,9 @@ public class Contact {
 	private String contactEmail;
 	private Long contactNum;
 
+	public Integer getContactId() {
+            return contactId;
+        }
+
+
 }
