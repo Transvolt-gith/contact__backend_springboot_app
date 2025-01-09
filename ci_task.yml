@@ -1,0 +1,16 @@
+---
+- name: Frist play - Copy Docker file, Copy artifat, Create docker image and push docker image
+  hosts: docker
+  tasks:
+    - name: Copy Dockerfile
+      copy:
+       src: Dockerfile
+       dest: /home/ansadmin
+    - name: Copy artifact
+      copy:
+       src: target
+       dest: /home/ansadmin
+    - name: Build docker image
+      command: docker build -t contact_backend_app .
+    - name: Push docker image
+      command: docker push sushila91/surajit:contact_backend_app
