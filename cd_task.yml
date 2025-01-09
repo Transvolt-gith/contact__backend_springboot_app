@@ -1,0 +1,17 @@
+---
+- name: My play for K8s deployment
+  hosts: ekshost
+  tasks:
+    - name: Pull docker image
+      command: docker pull sushila91/surajit:contact_backend_app
+    - name: Copy K8s deployment file
+      copy:
+       src: Deployment.yml
+       dest: /home/ansadmin
+    - name: K8s deployment
+      command: kubectl apply -f Deployment.yml
+...
+      
+      
+      
+      
