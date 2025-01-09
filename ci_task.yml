@@ -14,3 +14,5 @@
       command: docker build -t contact_backend_app .
     - name: Push docker image
       command: docker push sushila91/surajit:contact_backend_app
+...      
+      
