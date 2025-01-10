@@ -9,7 +9,7 @@
        src: Deployment.yml
        dest: /home/ansadmin/backend
     - name: K8s deployment
-      command: kubectl apply -f Deployment.yml
+      command: kubectl apply -f Deployment.yml /home/ansadmin/backend
 ...
       
       
