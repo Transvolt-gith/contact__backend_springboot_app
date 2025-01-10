@@ -5,11 +5,11 @@
     - name: Copy Dockerfile
       copy:
        src: Dockerfile
-       dest: /home/ansadmin
+       dest: /home/ansadmin/backend
     - name: Copy artifact
       copy:
        src: target
-       dest: /home/ansadmin
+       dest: /home/ansadmin/backend
     - name: Build docker image
       command: docker build -t sushila91/surajit:contact_backend_app  .
     - name: Push docker image
