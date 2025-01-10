@@ -7,7 +7,7 @@
     - name: Copy K8s deployment file
       copy:
        src: Deployment.yml
-       dest: /home/ansadmin
+       dest: /home/ansadmin/backend
     - name: K8s deployment
       command: kubectl apply -f Deployment.yml
 ...
