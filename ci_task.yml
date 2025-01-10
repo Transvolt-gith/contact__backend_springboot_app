@@ -11,7 +11,7 @@
        src: target
        dest: /home/ansadmin/backend
     - name: Build docker image
-      command: docker build -t sushila91/surajit:contact_backend_app  .
+      command: docker build -t sushila91/surajit:contact_backend_app  /home/ansadmin/backend
     - name: Push docker image
       command: docker push sushila91/surajit:contact_backend_app
 ...      
