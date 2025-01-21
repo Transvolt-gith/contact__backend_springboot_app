@@ -1,0 +1,20 @@
+pipeline {
+    agent {
+       label 'Slave-2'
+    }
+    
+
+    stages {
+        stage('Git Colne') {
+            steps {
+                git branch: 'main', credentialsId: 'Github-Credentials', url: 'https://github.com/Transvolt-gith/contact__backend_springboot_app.git'
+            }
+        }
+        
+        stage('K8s Deployment') {
+            steps {
+                sh 'ansible-playbook cd_task.yml'
+            }
+        }
+    }
+}
