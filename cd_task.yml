@@ -8,6 +8,8 @@
       copy:
        src: Deployment.yml
        dest: /home/ansadmin/backend
+    - name: K8s Delete Deployment
+      command: kubectl delete deployment contactbackendappdeployment
     - name: K8s deployment
       command: kubectl apply -f /home/ansadmin/backend/Deployment.yml
 ...
